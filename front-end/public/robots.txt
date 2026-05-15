@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: 
+Sitemap: https://chatrr-ten.vercel.app/sitemap.xml
