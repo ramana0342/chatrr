@@ -7,7 +7,7 @@ const getBaseURL = () => {
     return `http://localhost:5000/${chatrrBaseURL}`;
   }
 
-  return `https://ramana-portfolio-api.onrender.com/${chatrrBaseURL}`;
+  return `https://chatrr-api.onrender.com/${chatrrBaseURL}`;
 
 };
 
