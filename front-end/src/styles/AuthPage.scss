@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auth-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width : 370px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 700px;
+    height: fit-content;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        min-height: fit-content;
+    }
+}
+
+// ====================
+// LEFT
+// ====================
+
+.auth-left {
+    background: linear-gradient(135deg,
+            #2563eb,
+            #1e3a8a);
+
+    color: white;
+
+    padding: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+//     .product-img-container{
+//         display: flex;
+//         justify-content: center;
+//         height: 300px;
+//         width: 300px;
+//         border-radius: 50%;
+//         margin-bottom: 5px;
+//     .product-img{
+//      width: 100%;
+//      height: 100%;
+//      border-radius: 100%;
+//     }
+// }
+
+.product-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+
+  /* 🔥 Soft glowing shadow */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* ✨ clean background */
+  background: #fff;
+
+  /* smooth effect */
+  transition: all 0.3s ease;
+
+  &:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+}
+}
+
+
+
+    h1 {
+        font-size: 64px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+        opacity: 0.9;
+        max-width: 400px;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+// ====================
+// RIGHT
+// ====================
+
+.auth-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    @media (max-width: 370px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media (max-width: 900px) {
+        height: fit-content;
+    }
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-top-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+
+    button {
+        flex: 1;
+        height: 50px;
+        border: none;
+        border-radius: 12px;
+        background: #e2e8f0;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .active {
+        background: #2563eb;
+        color: white;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: #0f172a;
+    line-height: 100%;
+}
+
+.auth-subtitle {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+    }
+
+    input {
+        width: 100%;
+        height: 45px;
+        border: 1px solid #cbd5e1;
+        border-radius: 7px !important;
+        padding: 0 18px;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+            border-radius: 7px !important;
+        }
+    }
+}
+
+.submit-btn {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 14px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+        background: #1d4ed8;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.error-text {
+    color: red;
+    font-size: 13px;
+    margin: 0px;
+}
