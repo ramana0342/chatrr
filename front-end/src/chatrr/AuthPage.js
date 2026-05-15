@@ -10,7 +10,7 @@ import ProductLogo from "../assets/product-logo.png"
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [setUserDetails] = useContext(store)
+  const [userDetails, setUserDetails] = useContext(store)
   const navigate = useNavigate()
   const [loginLoading, setLoginLoading] =
     useState(false);
