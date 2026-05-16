@@ -20,5 +20,5 @@ export const getSocketURL = () => {
     return "http://localhost:5000";
   }
 
-  return "https://ramana-portfolio-api.onrender.com";
+  return "https://chatrr-api.onrender.com";
 };

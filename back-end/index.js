@@ -17,18 +17,20 @@ const app = express();
 const server = http.createServer(app);
 
 
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-  },
-});
-
-setupChatSocket(io);
-
 const allowedOrigins = [
   "http://localhost:3000",
   "https://chatrr-ten.vercel.app"
 ];
+
+const io = new Server(server, {
+  cors: {
+    origin: allowedOrigins,
+    credentials: true,
+    transports: ["websocket", "polling"]
+  }
+});
+
+setupChatSocket(io);
 
 app.use(cors({
   origin: function (origin, callback) {
